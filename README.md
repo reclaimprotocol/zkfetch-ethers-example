@@ -7,7 +7,7 @@ This project demonstrates how to generate a proof using Reclaim's zkFetch and ve
 - Node.js and npm installed
 - Access to a blockchain RPC URL (e.g., Base Sepolia network)
 - A Reclaim app ID and app secret from [Reclaim Dashboard](https://dev.reclaimprotocol.org/dashboard)
-- A smart contract deployed on the blockchain that has a `verifyProof` function
+- Address of a deployed Reclaim contract you can find how to [deploy your own](https://docs.reclaimprotocol.org/solidity/quickstart) or use our already [deployed contract](https://docs.reclaimprotocol.org/solidity/supported-networks) from our [Documentaion](https://docs.reclaimprotocol.org/solidity/supported-networks)
 
 ## Setup
 
@@ -15,16 +15,17 @@ This project demonstrates how to generate a proof using Reclaim's zkFetch and ve
 
    ```bash
    git clone https://gitlab.reclaimprotocol.org/starterpacks/zkfetch-ethers-example.git
-   cd zkfetch-startup
+   cd zkfetch-ethers-example
     ```
 2. **Install Dependencies**
     ```bash
     npm install
     ```
 
-3. **Create a `.env` File**
-Create a .env file in the root directory and populate it with the content mentioned in the `.env.example`
-Make sure to replace the placeholders with your actual values.
+3. **Create a `.env` File**:
+
+    Create a .env file in the root directory and populate it with the content mentioned in the `.env.example`
+    Make sure to replace the placeholders with your actual values.
 
 4. **Running the Script**
 To execute the proof verification script, run:
@@ -36,7 +37,7 @@ To execute the proof verification script, run:
 
     - Fetch the Ethereum price from the CoinGecko API (As an Example).
     - Generate a proof for the fetched data.
-    - Verify the proof on-chain using the provided contract
+    - Verify the proof on-chain using the provided contract address.
 
 ## Project Structure
 - `index.js`: The main script for generating and verifying proofs.
