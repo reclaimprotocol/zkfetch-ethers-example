@@ -11,7 +11,7 @@
   "description": "",
   "dependencies": {
     "@reclaimprotocol/js-sdk": "^2.1.1",
-    "@reclaimprotocol/zk-fetch": "^0.2.0",
+    "@reclaimprotocol/zk-fetch": "^0.3.1",
     "dotenv": "^16.4.5",
     "ethers": "5.7",
     "js-base64": "^3.7.7"
