@@ -1,5 +1,5 @@
 const { ReclaimClient } = require("@reclaimprotocol/zk-fetch");
-const transformForOnchain = require("@reclaimprotocol/js-sdk");
+const { transformForOnchain } = require("@reclaimprotocol/js-sdk");
 const { ethers } = require("ethers");
 const dotenv = require("dotenv");
 const contractABI = require("./contractABI.json");
@@ -36,7 +36,6 @@ async function verifyProof() {
       console.log("Failed to generate proof");
       return;
     }
-    console.log("Generated Proof:", proof);
 
     // Verify the proof on-chain
     const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL);
@@ -48,6 +47,8 @@ async function verifyProof() {
     );
     const proofData = await transformForOnchain(proof);
 
+    console.log("Transformed Proof for On-Chain Verification:", proofData);
+    
     // Call the verifyProof function on the smart contract
     const tx = await contract.verifyProof(proofData);
     await tx.wait();
